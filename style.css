@@ -125,10 +125,6 @@ main > * {
   display: flex;
   flex-direction: column;
 }
-.callToAction .picture {
-  background-size: cover;
-  height: 50vh;
-}
 
 .info {
   padding: 2rem;
@@ -163,6 +159,11 @@ main > * {
 }
 .info > a:visited {
   all: initial;
+}
+
+.picture {
+  background-size: cover;
+  height: 50vh;
 }
 
 .transform {
@@ -304,6 +305,112 @@ footer > nav > a {
 }
 .socialMediaLinks > * {
   cursor: pointer;
+}
+
+@media screen and (min-aspect-ratio: 12/16) {
+  header {
+    background-image: url(./images/desktop/image-header.jpg);
+  }
+  header > h1 {
+    top: 10%;
+  }
+  header > h1::after {
+    top: 500%;
+  }
+
+  .callToAction {
+    flex-direction: row;
+  }
+  .callToAction > * {
+    padding: 0;
+  }
+  .callToAction.transform {
+    flex-direction: row;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    width: calc(50% - 16vw);
+  }
+
+  .picture {
+    width: 50%;
+    height: 75vh;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .service {
+    width: 50%;
+  }
+  .service > * {
+    margin-inline: 12vw;
+  }
+
+  .graphicDesign {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+  }
+
+  .photography {
+    background-image: url(./images/desktop/image-photography.jpg);
+  }
+
+  .testimonials {
+    padding-block: 5rem;
+  }
+
+  .testimonialsMain {
+    display: flex;
+    flex-direction: row;
+    margin-inline: 5rem;
+  }
+
+  .testimonial > p {
+    margin-block: 3rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    height: 30rem;
+    width: 100vw;
+  }
+  .gallery > div {
+    width: 25vw;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .gallery > div:nth-child(1) {
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+  }
+
+  .gallery > div:nth-child(2) {
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+  }
+
+  .gallery > div:nth-child(3) {
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+  }
+
+  .gallery > div:nth-child(4) {
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  }
+
+  footer {
+    width: auto;
+    height: 35vh;
+    padding-inline: 32.5vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
