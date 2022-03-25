@@ -157,9 +157,13 @@ main > * {
   height: 0.8em;
   border-radius: 999rem;
   opacity: 25%;
+  transition: opacity 0.3s;
 }
 .info > a:visited {
   all: initial;
+}
+.info > a:hover::after {
+  opacity: 1;
 }
 
 .picture {
@@ -285,6 +289,14 @@ footer {
   align-items: stretch;
   background-color: #91d4c6;
 }
+footer img,
+footer a {
+  transition: filter 0.3s;
+}
+footer img:hover,
+footer a:hover {
+  filter: brightness(10);
+}
 footer > img {
   margin: 3rem auto;
   margin-bottom: 2rem;
@@ -345,6 +357,11 @@ footer > nav > a {
     padding: 0.75rem 1.5rem;
     margin: 0 1rem;
     background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .headerMain > nav .contactLink:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
   }
   .headerMain > nav::before {
     display: none;
@@ -443,6 +460,10 @@ footer > nav > a {
     width: auto;
     height: 35vh;
     padding-inline: 32.5vw;
+  }
+
+  .socialMediaLinks {
+    margin-inline: 4rem;
   }
 }
 

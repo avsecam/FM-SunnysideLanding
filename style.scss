@@ -173,7 +173,6 @@ main {
 	padding: 2rem;
 	padding-bottom: 4rem;
 
-
 	> h2 {
 		font-family: $fontEmp;
 		font-weight: $fwBlack;
@@ -202,11 +201,16 @@ main {
 			height: 0.8em;
 			border-radius: 999rem;
 			opacity: 25%;
+			transition: opacity 0.3s;
 		}
 
 		&:visited {
 			all: initial;
 		}
+	}
+
+	> a:hover::after {
+		opacity: 1;
 	}
 }
 .picture {
@@ -346,6 +350,15 @@ footer {
 	align-items: stretch;
 	background-color: $cyan200;
 
+	img,
+	a {
+		transition: filter 0.3s;
+	}
+	img:hover,
+	a:hover {
+		filter: brightness(10)
+	}
+
 	> img {
 		margin: 3rem auto;
 		margin-bottom: 2rem;
@@ -412,6 +425,12 @@ footer {
 			padding: 0.75rem 1.5rem;
 			margin: 0 1rem;
 			background-color: $white;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				background-color: hsla(0 0 100 / 25%);
+				color: $white;
+			}
 		}
 
 		&::before {
@@ -505,5 +524,8 @@ footer {
 		width: auto;
 		height: 35vh;
 		padding-inline: 32.5vw;
+	}
+	.socialMediaLinks {
+		margin-inline: 4rem;
 	}
 }
