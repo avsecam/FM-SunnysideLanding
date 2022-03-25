@@ -9,6 +9,8 @@
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
   <link rel="stylesheet" href="style.css">
+
+  
 </head>
 <body>
 
@@ -16,7 +18,7 @@
     <div class="headerMain">
       <img src="./images/logo.svg" alt="">
       <img class="burger" src="./images/icon-hamburger.svg" alt="">
-      <nav>
+      <nav class="navClosed">
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Projects</a>
@@ -101,7 +103,7 @@
       </div>
     </section>
 
-    <section class="misc">
+    <section class="gallery">
       <div></div>
       <div></div>
       <div></div>
@@ -110,7 +112,7 @@
   </main>
 
   <footer>
-    <img src="./images/logo.svg" alt="">
+    <img src="./images/logo-cyan.svg" alt="">
     <nav>
       <a href="#">About</a>
       <a href="#">Services</a>
@@ -123,5 +125,13 @@
       <img src="./images/icon-pinterest.svg" alt="">
     </div>
   </footer>
+
+  <script>
+    const burger = document.querySelector(".burger")
+    const headerNav = document.querySelector("header nav")
+    burger.addEventListener("click", () => {
+      headerNav.classList.toggle("navClosed")
+    })
+  </script>
 </body>
 </html>
