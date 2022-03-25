@@ -134,6 +134,17 @@
     burger.addEventListener("click", () => {
       headerNav.classList.toggle("navClosed")
     })
+
+    closeNav(headerNav)
+    window.addEventListener("resize", () => {
+      closeNav(headerNav)
+    })
+
+    function closeNav(nav) {
+      if (window.innerWidth / window.innerHeight >= 12/16) {
+        nav.classList.remove("navClosed")
+      }
+    }
   </script>
 </body>
 </html>
